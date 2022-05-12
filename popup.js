@@ -1,12 +1,17 @@
+import { defaultConfig } from './config.js'
+
 document.addEventListener('DOMContentLoaded', async () => {
-  const { type, newTab } = await chrome.storage.sync.get()
+  const { type, hotkey, newTab } = { ...defaultConfig, ...await chrome.storage.sync.get() }
+  console.log({ ...defaultConfig, ...await chrome.storage.sync.get() }, form.hotkey)
   form.type.value = type
+  form.hotkey.value = hotkey
   form.newTab.checked = newTab
 })
 
 form.addEventListener('change', async () => {
   const type = form.type.value
+  const hotkey = form.hotkey.value
   const newTab = form.newTab.checked
 
-  await chrome.storage.sync.set({ type, newTab })
+  await chrome.storage.sync.set({ ...defaultConfig, type, hotkey, newTab })
 })

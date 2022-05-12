@@ -18,6 +18,11 @@
       align-items: center;
       margin-top: 20px;
     }
+
+    .wrapper .item input[type="text"] {
+      width: 55%;
+      padding: 0 4px;
+    }
   </style>
 </head>
 <body>
@@ -31,8 +36,12 @@
       </select>
     </div>
     <div class="item">
+      <span>Hotkey</span>
+      <input type="text" name="hotkey" id="hotkey" value="," />
+    </div>
+    <div class="item">
       <span>Open in New Tab</span>
-      <input name="newTab" type="checkbox" id="new-tab" checked>
+      <input type="checkbox" name="newTab" id="new-tab" checked>
     </div>
   </form>
   <script src="popup.js" type="module"></script>

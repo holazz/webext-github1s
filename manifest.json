@@ -5,7 +5,8 @@
   "description": "GitHub1s Extension",
   "homepage_url": "https://github.com/holazz/webext-github1s",
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "background.js",
+    "type": "module"
   },
   "permissions": ["storage", "activeTab"],
   "host_permissions": [
