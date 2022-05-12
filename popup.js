@@ -1,10 +1,3 @@
-async function setOptions() {
-  const type = form.type.value
-  const newTab = form.newTab.checked
-
-  await chrome.storage.sync.set({ type, newTab })
-}
-
 async function init() {
   const { type, newTab } = await chrome.storage.sync.get()
   form.type.value = type
@@ -12,4 +5,10 @@ async function init() {
 }
 
 document.addEventListener('DOMContentLoaded', init)
-form.addEventListener('change', setOptions)
+
+form.addEventListener('change', async () => {
+  const type = form.type.value
+  const newTab = form.newTab.checked
+
+  await chrome.storage.sync.set({ type, newTab })
+})
