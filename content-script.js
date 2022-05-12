@@ -27,7 +27,7 @@ class GitHub1s {
 
     if (!this.el) {
       this.el = document.createElement('div')
-      this.el.classList = 'd-flex flex-auto justify-end'
+      this.el.classList = 'd-flex flex-auto flex-justify-end'
       const inner = document.createElement('a')
       inner.classList = 'gh1s-btn btn mr-2'
       inner.href = window.location.href.replace('https://github.com/', 'https://github1s.com/')
