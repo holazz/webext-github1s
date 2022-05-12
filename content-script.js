@@ -21,7 +21,6 @@ async function init() {
   console.log('[GitHub1s] init')
 
   const config = await chrome.storage.sync.get()
-  console.log(111, config)
   const observer = new MutationObserver(
     () => (!document.querySelector('#gh1s-btn')) && createElement(config)
   )
