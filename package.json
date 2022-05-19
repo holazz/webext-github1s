@@ -4,14 +4,14 @@
   "private": true,
   "description": "",
   "keywords": [],
-  "license": "ISC",
-  "author": "",
+  "license": "MIT",
+  "author": "zz",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint ."
   },
   "devDependencies": {
-    "@holazz/eslint-config": "^1.0.5",
-    "@types/chrome": "^0.0.184",
+    "@holazz/eslint-config": "^1.0.7",
+    "@types/chrome": "^0.0.186",
     "eslint": "^8.15.0",
     "typescript": "^4.6.4"
   }

@@ -21,15 +21,16 @@ async function init() {
   console.log('[GitHub1s] init')
 
   const config = await chrome.storage.sync.get()
-  const observer = new MutationObserver(
-    () => (!document.querySelector('#gh1s-btn')) && createElement(config)
-  )
+  const observer = new MutationObserver(() => {
+    if (document.querySelector('#gh1s-btn')) return
+    createElement(config)
+  })
   observer.observe(
-    document.querySelector('#repo-content-pjax-container'),
+    document.querySelector('#js-repo-pjax-container'),
     {
       childList: true,
       subtree: true,
-    }
+    },
   )
 }
 
