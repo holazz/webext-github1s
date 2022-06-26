@@ -1,3 +1,3 @@
 {
-  "extends": "@holazz"
+  "extends": ["@holazz", "@holazz/eslint-config-prettier"]
 }

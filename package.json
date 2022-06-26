@@ -1,18 +1,42 @@
 {
   "name": "webext-github1s",
+  "displayName": "GitHub1s",
   "version": "0.0.0",
   "private": true,
-  "description": "",
-  "keywords": [],
+  "description": "⚡️ 1s to GitHub1s!",
+  "keywords": [
+    "webextension",
+    "chrome",
+    "github",
+    "github1s"
+  ],
   "license": "MIT",
   "author": "zz",
   "scripts": {
-    "lint": "eslint ."
+    "dev": "vite",
+    "build": "vite build",
+    "pack": "vite build && crx pack dist -o ./dist/extension.crx",
+    "start": "web-ext run --source-dir ./dist --target=chromium",
+    "lint": "eslint .",
+    "release": "bumpp --commit --push --tag"
+  },
+  "dependencies": {
+    "vue": "^3.2.37"
   },
   "devDependencies": {
-    "@holazz/eslint-config": "^1.0.7",
-    "@types/chrome": "^0.0.186",
-    "eslint": "^8.15.0",
-    "typescript": "^4.6.4"
+    "@crxjs/vite-plugin": "^1.0.12",
+    "@holazz/eslint-config": "^1.2.2",
+    "@holazz/eslint-config-prettier": "^1.2.2",
+    "@types/chrome": "^0.0.190",
+    "@vitejs/plugin-vue": "^2.3.3",
+    "bumpp": "^8.2.1",
+    "crx": "^5.0.1",
+    "eslint": "^8.18.0",
+    "prettier": "^2.7.1",
+    "typescript": "^4.7.4",
+    "unocss": "^0.41.0",
+    "unplugin-auto-import": "^0.9.1",
+    "vite": "^2.9.12",
+    "web-ext": "^7.1.0"
   }
 }
