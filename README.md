@@ -30,7 +30,9 @@ pnpm i && pnpm build
 | `Hotkey` | Shortcuts to open GitHub1s | `,` |
 | `New Tab` | whether to open GitHub1s in a new tab | `true` |
 
-> **Note** For hotkey configuration, please refer to [github/hotkey](https://github.com/github/hotkey)
+> **Note**
+>
+> For hotkey configuration, please refer to [github/hotkey](https://github.com/github/hotkey)
 
 ## License
 
