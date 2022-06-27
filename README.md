@@ -6,13 +6,13 @@
 
 ## Installation
 
-1. clone this repo
+1. Clone this repo
 
 ```sh
 git clone git@github.com:holazz/webext-github1s.git
 ```
 
-2. build extension
+2. Build extension
 
 ```sh
 pnpm i && pnpm build
