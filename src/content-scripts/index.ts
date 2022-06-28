@@ -2,7 +2,7 @@ import Button from './views/Button.vue'
 
 function isRepoPage() {
   return document.body.contains(
-    document.querySelector('#repo-content-pjax-container'),
+    document.querySelector('#js-repo-pjax-container'),
   )
 }
 
@@ -14,16 +14,16 @@ async function init() {
     if (document.querySelector('#gh1s-btn')) return
     createElement()
   })
-  observer.observe(document.querySelector('#js-repo-pjax-container')!, {
+  observer.observe(document, {
     childList: true,
     subtree: true,
   })
 }
 
 async function createElement() {
+  // [.d-none .d-md-block] didn't exist when not login
   const refNode = document.querySelector(
-    // [.d-none .d-md-block] didn't exist when not login
-    '#repo-content-pjax-container a.btn[data-hotkey="t"]',
+    '#js-repo-pjax-container a.btn[data-hotkey="t"]',
   )
   if (!refNode) return
 
